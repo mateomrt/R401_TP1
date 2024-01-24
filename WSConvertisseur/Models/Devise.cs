@@ -1,4 +1,6 @@
-﻿namespace WSConvertisseur.Models
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace WSConvertisseur.Models
 {
     public class Devise
     {
@@ -11,6 +13,7 @@
             get { return id; }
             set { id = value; }
         }
+        [Required]
         public string? NomDevise
         {
             get { return nomDevise; }
@@ -35,8 +38,12 @@
 
         }
 
-
-
-
+        public override bool Equals(object? obj)
+        {
+            return obj is Devise devise &&
+                   Id == devise.Id &&
+                   NomDevise == devise.NomDevise &&
+                   Taux == devise.Taux;
+        }
     }
 }
