@@ -8,18 +8,18 @@
 
         public int Id
         {
-            get { return Id; }
-            set { Id = value; }
+            get { return id; }
+            set { id = value; }
         }
         public string? NomDevise
         {
-            get { return NomDevise; }
-            set { NomDevise = value; }
+            get { return nomDevise; }
+            set { nomDevise = value; }
         }
         public double Taux
         {
-            get { return Taux; }
-            set { Taux = value; }
+            get { return taux; }
+            set { taux = value; }
         }
         public Devise(int id, string? nomDevise, double taux)
         {
